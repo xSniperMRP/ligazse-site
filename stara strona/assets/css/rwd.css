@@ -1,0 +1,290 @@
+@media screen and (max-width: 1200px) {
+    
+}
+
+@media screen and (max-width: 736px) {
+    nav ul li:nth-child(2) a {
+        color: red;
+    }
+    
+    #header {
+        height: 75vh;
+    }
+    
+    #logo img {
+        width: 75%;
+        margin: 0 auto;
+        text-align: center;
+        top: 15%;
+        left: 15%;
+    }
+    
+    #registration {
+        display: none;
+    }
+    
+    .space-about {
+        width: 100%;
+        top: -2%;
+        height: auto;
+    }
+    
+    .space-about img {
+        width: 100%;
+    }
+    
+    #section1 {
+        height: 400vh;
+    }
+    
+    #aboutus {
+        padding: 0 5px;
+    }
+    
+    .teambutton a img{
+        width: 100%;
+    }
+    
+    #socialmedia {
+        height: 300vh;
+    }
+    
+    #socialmedia p {
+        width: 100% !important;
+    }
+    
+    .media {
+        width: 100%;
+    }
+    
+    .media a img {
+        width: 25% !important;
+    }
+    
+    .space-games {
+        height: auto;
+        top: -2%;
+    }
+    
+    .space-games img{
+        width: 100%;
+    }
+    
+    #section2 {
+        height: 400vh;
+    }
+    
+    #games {
+        height: 150vh;
+    }
+    
+    .gameslogo {
+        width: 100%;
+    }
+    
+    .gameslogo img {
+        width: 125px !important;
+    }
+    
+    #subtitle1 {
+        margin: 0 auto;
+        padding: 30px;
+    }
+    
+    #sponsors {
+        height: 50vh;
+    }
+}
+@media screen and (max-width: 480px) {
+
+   nav ul li:nth-child(2) a {
+        color: red;
+    }
+    
+    #header {
+        height: 75vh;
+    }
+    
+    #logo img {
+        width: 75%;
+        margin: 0 auto;
+        text-align: center;
+        top: 15%;
+        left: 15%;
+    }
+    
+    #registration {
+        display: none;
+    }
+    
+    .space-about {
+        width: 100%;
+        top: -2%;
+        height: auto;
+    }
+    
+    .space-about img {
+        width: 100%;
+    }
+    
+    #section1 {
+        height: 400vh;
+    }
+    
+    #aboutus {
+        padding: 0 5px;
+    }
+    
+    .teambutton a img{
+        width: 100%;
+    }
+    
+    #socialmedia {
+        height: 300vh;
+    }
+    
+    #socialmedia p {
+        width: 100% !important;
+    }
+    
+    .media {
+        width: 100%;
+    }
+    
+    .media a img {
+        width: 25% !important;
+    }
+    
+    .space-games {
+        height: auto;
+        top: -2%;
+    }
+    
+    .space-games img{
+        width: 100%;
+    }
+    
+    #section2 {
+        height: 400vh;
+    }
+    
+    #games {
+        height: 150vh;
+    }
+    
+    .gameslogo {
+        width: 100%;
+    }
+    
+    .gameslogo img {
+        width: 125px !important;
+    }
+    
+    #subtitle1 {
+        margin: 0 auto;
+        padding: 30px;
+    }
+    
+    #sponsors {
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    
+    nav ul li:nth-child(2) a {
+        color: red;
+    }
+    
+    #header {
+        height: 75vh;
+    }
+    
+    #logo img {
+        width: 75%;
+        margin: 0 auto;
+        text-align: center;
+        top: 15%;
+        left: 15%;
+    }
+    
+    #registration {
+        display: none;
+    }
+    
+    .space-about {
+        width: 100%;
+        top: -2%;
+        height: auto;
+    }
+    
+    .space-about img {
+        width: 100%;
+    }
+    
+    #section1 {
+        height: 400vh;
+    }
+    
+    #aboutus {
+        padding: 0 5px;
+    }
+    
+    .teambutton a img{
+        width: 100%;
+    }
+    
+    #socialmedia {
+        height: 300vh;
+    }
+    
+    #socialmedia p {
+        width: 100% !important;
+    }
+    
+    .media {
+        width: 100%;
+    }
+    
+    .media a img {
+        width: 25% !important;
+    }
+    
+    .space-games {
+        height: auto;
+        top: -2%;
+    }
+    
+    .space-games img{
+        width: 100%;
+    }
+    
+    #section2 {
+        height: 400vh;
+    }
+    
+    #games {
+        height: 150vh;
+    }
+    
+    .gameslogo {
+        width: 100%;
+    }
+    
+    .gameslogo img {
+        width: 125px !important;
+    }
+    
+    #subtitle1 {
+        margin: 0 auto;
+        padding: 30px;
+    }
+    
+    #sponsors {
+        height: 50vh;
+    }
+}
+
+
+
+

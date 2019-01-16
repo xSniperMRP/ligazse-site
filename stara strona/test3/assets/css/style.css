@@ -1,0 +1,665 @@
+@import url(font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
+/* KOLOR */
+
+/* #11597f */
+
+/* /KOLOR */
+
+
+/* CZCIONKi */
+
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Monda';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Monda Regular'), local('Monda-Regular'), url(http://fonts.gstatic.com/s/monda/v7/TK3tWkYFABsmjspvPho7vA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Monda';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Monda Regular'), local('Monda-Regular'), url(http://fonts.gstatic.com/s/monda/v7/TK3tWkYFABsmjsphPho.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html, body {
+    width: 100%; 
+    height: 1800px;
+    margin: 0;
+    padding: 0;
+    background: url("../../images/background.jpg");
+    background-attachment: fixed;
+    backgroun-repeat: no-repeat
+	}
+
+	body {
+		line-height: 1;
+	}
+	
+	body > * {
+		position: relative;
+		z-index: 2;
+		}
+		
+	@-ms-viewport {
+		width: device-width;
+	}
+
+	body {
+		-ms-overflow-style: scrollbar;
+	}
+	
+	.body {
+		background-color: black;
+	}
+	
+	*, *:before, *:after {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	
+	body {
+		-webkit-text-size-adjust: none;
+	}
+	
+	ol, ul {
+		list-style: none;
+	}
+	
+	h1, h2, h3, h4, h5, h6, p {
+		margin: 0;
+	}
+	
+	a {
+		-moz-transition: border-bottom-color 0.2s ease, color 0.2s ease;
+		-webkit-transition: border-bottom-color 0.2s ease, color 0.2s ease;
+		-ms-transition: border-bottom-color 0.2s ease, color 0.2s ease;
+		transition: border-bottom-color 0.2s ease, color 0.2s ease;
+		color: #fff;
+		text-decoration: none;
+	}
+
+	a:hover {
+		border-bottom-color: transparent;
+		color: #fff;
+		text-decoration: none;
+	}
+        
+
+/* =======================================================	 */
+
+
+.card {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    top: 25%;
+    left: 25%;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 0 20px 100px rgba(0, 0, 0, .5);
+    transition: 1s;
+}
+
+.card:hover {
+    transform: translate(-50%, -50%) perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #11597f;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+}
+
+.card:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: #11597f;
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+
+.card .imgBox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    transition: 1s cubic-bezier(.15, 1.7,.84,.58);
+    background-image: url("../../images/jacek.png");
+}
+
+.card:hover .imgBox {
+    transform: rotateY(-135deg);
+    background-image: url("../../images/arek.png");
+}
+
+.card .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: -1;
+}
+
+
+/*============================================*/
+
+
+.card2 {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    top: 25%;
+    left: 50%;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 0 20px 100px rgba(0, 0, 0, .5);
+    transition: 1s;
+}
+
+.card2:hover {
+    transform: translate(-50%, -50%) perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+}
+
+.card2:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #11597f;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+}
+
+.card2:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: #11597f;
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+
+.card2 .imgBox2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    transition: 1s cubic-bezier(.15, 1.7,.84,.58);
+    background-image: url("../../images/jacek.png");
+}
+
+.card2:hover .imgBox2 {
+    transform: rotateY(-135deg);
+    background-image: url("../../images/arek.png");
+}
+
+.card2 .content2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: -1;
+}
+
+/*============================================*/
+
+
+.card3 {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    top: 25%;
+    left: 75%;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 0 20px 100px rgba(0, 0, 0, .5);
+    transition: 1s;
+}
+
+.card3:hover {
+    transform: translate(-50%, -50%) perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+}
+
+.card3:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #11597f;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+}
+
+.card3:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: #11597f;
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+
+.card3 .imgBox3 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    transition: 1s cubic-bezier(.15, 1.7,.84,.58);
+    background-image: url("../../images/jacek.png");
+}
+
+.card3:hover .imgBox3 {
+    transform: rotateY(-135deg);
+    background-image: url("../../images/arek.png");
+}
+
+.card3 .content3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: -1;
+}
+
+/*============================================*/
+
+
+.card4 {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    top: 75%;
+    left: 25%;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 0 20px 100px rgba(0, 0, 0, .5);
+    transition: 1s;
+}
+
+.card4:hover {
+    transform: translate(-50%, -50%) perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+}
+
+.card4:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #11597f;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+}
+
+.card4:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: #11597f;
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+
+.card4 .imgBox4 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    transition: 1s cubic-bezier(.15, 1.7,.84,.58);
+    background-image: url("../../images/jacek.png");
+}
+
+.card4:hover .imgBox4 {
+    transform: rotateY(-135deg);
+    background-image: url("../../images/arek.png");
+}
+
+.card4 .content4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: -1;
+}
+
+/*============================================*/
+
+
+.card5 {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    top: 75%;
+    left: 50%;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 0 20px 100px rgba(0, 0, 0, .5);
+    transition: 1s;
+}
+
+.card5:hover {
+    transform: translate(-50%, -50%) perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+}
+
+.card5:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #11597f;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+}
+
+.card5:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: #11597f;
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+
+.card5 .imgBox5 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    transition: 1s cubic-bezier(.15, 1.7,.84,.58);
+    background-image: url("../../images/jacek.png");
+}
+
+.card5:hover .imgBox5 {
+    transform: rotateY(-135deg);
+    background-image: url("../../images/arek.png");
+}
+
+.card5 .content5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: -1;
+}
+
+/*============================================*/
+
+
+.card6 {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    top: 75%;
+    left: 75%;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 0 20px 100px rgba(0, 0, 0, .5);
+    transition: 1s;
+}
+
+.card6:hover {
+    transform: translate(-50%, -50%) perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+}
+
+.card6:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #11597f;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+}
+
+.card6:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: #11597f;
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+
+.card6 .imgBox6 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    transition: 1s cubic-bezier(.15, 1.7,.84,.58);
+    background-image: url("../../images/jacek.png");
+}
+
+.card6:hover .imgBox6 {
+    transform: rotateY(-135deg);
+    background-image: url("../../images/arek.png");
+}
+
+.card6 .content6 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: -1;
+}
+
+/*============================================*/
+
+
+.card7 {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    top: 125%;
+    left: 25%;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 0 20px 100px rgba(0, 0, 0, .5);
+    transition: 1s;
+}
+
+.card7:hover {
+    transform: translate(-50%, -50%) perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+}
+
+.card7:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #11597f;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+}
+
+.card7:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: #11597f;
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+
+.card7 .imgBox7 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    transition: 1s cubic-bezier(.15, 1.7,.84,.58);
+    background-image: url("../../images/jacek.png");
+}
+
+.card7:hover .imgBox7 {
+    transform: rotateY(-135deg);
+    background-image: url("../../images/arek.png");
+}
+
+.card7 .content7 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: -1;
+}
+
+/*============================================*/
+
+
+.card8 {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    top: 125%;
+    left: 50%;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 0 20px 100px rgba(0, 0, 0, .5);
+    transition: 1s;
+}
+
+.card8:hover {
+    transform: translate(-50%, -50%) perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+}
+
+.card8:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #11597f;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+}
+
+.card8:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: #11597f;
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+
+.card8 .imgBox8 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    transition: 1s cubic-bezier(.15, 1.7,.84,.58);
+    background-image: url("../../images/jacek.png");
+}
+
+.card8:hover .imgBox8 {
+    transform: rotateY(-135deg);
+    background-image: url("../../images/arek.png");
+}
+
+.card8 .content8 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: -1;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    top: 1775px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    color: white;
+}

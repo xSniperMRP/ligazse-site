@@ -1,0 +1,221 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Liga E-Sport ZSE</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<meta name="keywords" content="league, of, legends, zse, zespol, szkol, elektronicznych, e-sport, boleslawiec, counter, strike, go, global, offensive, ofensive, liga, legend, cs, heartstone,  fifa, szkoła">
+		<meta name="description" content="Szkolna liga e-sportowa. Turnieje organizowane są w grach: CS:GO, LoL, FIFA, Heartstone">		
+		
+		<style>
+		#strona {
+			overflow: auto;
+		}
+		 
+		.counter {
+        margin: 10 auto;
+        text-align: center;
+		}
+	  
+		h3 {
+			border-style: solid;
+			border-color: #ffffff;
+			border-width: 2px;
+			border-right: none;
+			border-left: none;
+			border-radius: 20px;
+		}
+		
+		h4 {
+			border-color: #ffffff;
+			border-bottom-style: solid;
+			border-radius: 20px;
+			border-width: 1px;
+		}
+	  
+		</style>	
+		
+	</head>
+	<body class="landing">
+	
+
+			<div id="page-wrapper">
+			
+					<section id="banner">
+					<div id="strona">
+						<center><img src="images/logo.png" width="390" high="350" alt="" /></center>
+						<div class="inner" style="">
+							<h2>Liga ZSE Bolesławiec</h2>
+							<br>
+	<h1></h1>						
+    <h1>Do kolejnego meczu zostało...</h1>
+	<br/>
+	<h3>(LOL GRUPA A) Dis shi yige emo vs KYSPLYS</h3>
+    <pre class="example">
+
+    </pre>
+    <div id='counter' class='counter'></div>
+
+	<div style="text-align: center; padding-bottom: 1em;">
+      <script type="text/javascript">
+        function counterEndOnEnd(e) {
+          $("#counter-end").text('');
+        }
+
+        function reloadCounterEnd() {
+          var reloadTime = new Date();
+          reloadTime.setSeconds(reloadTime.getSeconds() + 10);
+          reloadTime.setMilliseconds(0);
+          var reloadTimeString = reloadTime.toISOString()
+
+          reloadCounter('#counter-end',
+                        reloadTimeString,
+                        'UTC',
+                        150,
+                        'whitesmoke',
+                        'grey',
+                        counterEndOnEnd,
+                        false);
+        }
+      </script>
+
+    </div>
+    <div id='counter-end' class='counter'></div>
+    
+    <div style="text-align: center; padding-bottom: 1em;">
+      <script type="text/javascript">
+        function counterEndTriggerOnEnd(e) {
+          $("#counter-end-trigger")
+            .text('This was the end and it was triggered! ' +
+                  '(counter original target: ' +
+                  e.options.targetDateObject.toISOString() +
+                  ')');
+        }
+
+        function reloadCounterEndTrigger() {
+          reloadCounter('#counter-end-trigger',
+                        targetDateStringPast,
+                        'UTC',
+                        150,
+                        'lightcyan',
+                        'darkcyan',
+                        counterEndTriggerOnEnd,
+                        true);
+        }
+      </script>
+	  
+	  
+
+    </div>
+    <div id='counter-end-trigger' class='counter'></div>
+
+    
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.14/moment-timezone-with-data-2012-2022.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="countdowncube.js"></script>
+    <script>
+      var targetDate = new Date();
+      targetDate.setMonth(targetDate.getDate() + 0)
+      targetDate.setDate(0)
+      targetDate.setHours(0)
+      targetDate.setMinutes(0)
+      targetDate.setSeconds(0)
+      targetDate.setMilliseconds(0);
+
+      var targetDateStringUTC = targetDate.toISOString()
+                                          .replace(':00.000', '');
+      var targetDateString = targetDateStringUTC.replace('Z', '');
+
+      var targetLADate = moment.tz(targetDateStringUTC,
+                                   'America/Los_Angeles').format();
+      var tzLAOffset = targetLADate.substr(-6);
+      var targetDateStringOffset = targetDateString.replace('Z', '')
+                                       .replace(':00.000', '') +
+                                       tzLAOffset;
+
+      var tzOldFormatOffset = targetDateString.substr(-5);
+      var targetDateOldFormatString = targetDate.toLocaleDateString() +
+                                      ' ' + tzOldFormatOffset;
+
+      var pastDate = new Date();
+      pastDate.setMonth(targetDate.getMonth() - 18)
+      pastDate.setMinutes(0);
+      pastDate.setSeconds(0);
+      pastDate.setMilliseconds(0);
+      var targetDateStringPast = pastDate.toISOString()
+                                         .replace(':00.000', '');
+      var nearFutureDate = new Date();
+      nearFutureDate.setSeconds(nearFutureDate.getSeconds() + 10);
+      nearFutureDate.setMilliseconds(0);
+      var nearFutureDateString = nearFutureDate.toISOString()
+
+      $('.example').each(function() {
+        var str = $( this ).html()
+        var newstr = str.replace("{targetDateString}",
+                             targetDateString )
+                    .replace("{targetDateStringUTC}",
+                             targetDateStringUTC )
+                    .replace("{targetDateStringOffset}",
+                             targetDateStringOffset )
+                    .replace("{targetDateOldFormatString}",
+                             targetDateOldFormatString )
+                    .replace("{nearFutureDateString}",
+                             nearFutureDateString )
+                    .replace("{targetDateStringPast}",
+                             targetDateStringPast );
+
+        $( this ).html(newstr);
+      } );
+
+      // reload element with jQuery
+      // https://stackoverflow.com/questions/36590722/
+      function reloadCounter(element_id,
+                             new_target,
+                             targetTimezone,
+                             cubeSize,
+                             background,
+                             color,
+                             onEnd,
+                             triggerEnd) {
+
+        $(element_id).empty();
+
+        $(element_id).countdownCube( {
+          target: new_target,
+          targetTimezone: targetTimezone,
+          cubeSize: cubeSize,
+          background:  background,
+          color: color,
+          onEnd: onEnd,
+          triggerEnd: triggerEnd,
+        } );
+      };
+    </script>
+    <script>
+      $('#counter').countdownCube( {
+        target: '2018-12-30T16:00Z',
+        cubeSize: 150,
+        background:  '#ffffff',
+        color: 'black',
+		showDaysOnly: true,
+		labelsTranslations: {'day': 'dni','hour': 'godzin','minute': 'minut', 'second': 'sekund' },
+      } );
+
+    </script>
+
+	</section>					
+
+			
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	
+	</body>
+</html>
