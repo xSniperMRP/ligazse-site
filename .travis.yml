@@ -2,7 +2,6 @@ language: node_js
 node_js:
   - "8.7.0"
 
-
 # line 9 resolved an issue where the Travis server would
 # try to connect to my remote using ssh-dss, which then caused my
 # remote server to puke and demand a password, causing the build
@@ -14,9 +13,3 @@ sudo: false
 addons:
   ssh_known_hosts:
   - 54.37.232.131:22 # if your server uses a different port for ssh
-
-before_install:
-- eval "$(ssh-agent -s)"
-- cp .travis/id_rsa ~/.ssh/id_rsa
-- chmod 600 ~/.ssh/id_rsa
-- ssh-add ~/.ssh/id_rsa
