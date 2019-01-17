@@ -4,3 +4,4 @@ rvm:
  - jruby
  before_install:
   - gem install bundler
+script: 'bundle exec rake spec'
