@@ -1,4 +1,4 @@
-language: node_js
+language: bath
 deploy:
   provider: script
   script: bash sftp_deploy.sh
