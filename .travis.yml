@@ -3,4 +3,4 @@ deploy:
   provider: script
   script: bash sftp_deploy.sh
   on:
-    branch: master
+    branch: develop
