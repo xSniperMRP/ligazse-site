@@ -1,5 +1,6 @@
+
 deploy:
   provider: script
-  script: bash sftop_deploy.sh
+  script: bash sftp_deploy.sh
   on:
-    branch: develop
+    branch: master
