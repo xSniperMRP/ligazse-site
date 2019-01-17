@@ -1,6 +1,7 @@
 language: bath
+branches:
+  only:
+  - dev
 deploy:
   provider: script
   script: bash sftp_deploy.sh
-  on:
-    branch: develop
