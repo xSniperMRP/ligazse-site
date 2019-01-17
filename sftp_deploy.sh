@@ -1,1 +1,2 @@
-echo "hello world"
+echo hello >>new.txt
+cat new.txt
