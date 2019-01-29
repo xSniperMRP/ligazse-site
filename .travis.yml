@@ -1,9 +1,3 @@
-
-before_install:
-  - gem update --system
-  - gem --version
-install: gem install rails
-
 language: ruby
 rvm:
   - 2.2
